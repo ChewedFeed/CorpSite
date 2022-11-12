@@ -25,7 +25,7 @@ spec:
       imagePullSecrets:
         - name: regcred
       containers:
-        - name: frontend
+        - name: corpsite
           image: containers.chewedfeed.com/chewedfeed/corpsite:latest
           imagePullPolicy: Always
           ports:
