@@ -1205,16 +1205,16 @@ span.quotes_autor{
 }
 
 .service_live {
-  background-color: darkgreen;
+  background-color: #367259;
 }
 .icon_box .service_live {
-  background-color: darkgreen;
+  background-color: #367259;
 }
 .service_dev {
-  background-color: darkred;
+  background-color: #DD4A38;
 }
 .icon_box .service_dev {
-  background-color: darkred;
+  background-color: #DD4A38;
 }
 .service_staging {
   background-color: #646089;
