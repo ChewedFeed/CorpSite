@@ -1,0 +1,39 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: chewedfeed
+  name: corpsite
+  annotations:
+    cert-manager.io/cluster-issuer: acme-prod
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  labels:
+    app: corpsite
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - chewedfeed.com
+        - www.chewedfeed.com
+      secretName: chewedfeed-corpsite
+  rules:
+    - host: chewedfeed.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: corpsite
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+    - host: www.chewedfeed.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: corpsite
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
