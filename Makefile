@@ -21,7 +21,7 @@ publish: publish-images
 
 .PHONY: deploy
 deploy:
-	kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}=containers.chewedfeed.com/chewedfeed/${SERVICE_NAME}:${GIT_COMMIT} --namespace=chewedfeed
+	kubectl set image deployment/${SERVICE_NAME} image=containers.chewedfeed.com/chewedfeed/${SERVICE_NAME}:${GIT_COMMIT} --namespace=chewedfeed
 
 .PHONY: build-deploy
 build-deploy: build deploy
