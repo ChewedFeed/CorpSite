@@ -6,7 +6,7 @@
       "month": 0,
       "day": 1
     },
-    "name": "K8sDeploy",
+    "name": "K8sDeploy.dev",
     "description": "K8sDeploy is a tool to deploy your Kubernetes applications. That works on x86 and ARM.",
     "icon": "ship",
     "progress": 85
@@ -42,7 +42,7 @@
       "month": 0,
       "day": 1
     },
-    "name": "FruitStall",
+    "name": "FruitStall.net",
     "description": "FruitStall is a stock management system that doesn't suck.",
     "progress": 5,
     "icon": "boxes-stacked"
@@ -61,7 +61,7 @@
   },
   {
     "url": "https://todo-list.app",
-    "name": "Todo List",
+    "name": "Todo-List.app",
     "launchDate": {
       "year": 2024,
       "month": 5,
