@@ -26,7 +26,6 @@
   <!-- Font awesome -->
   <script src="https://kit.fontawesome.com/2a7ab7dc39.js" crossorigin="anonymous"></script>
   <!-- end Font awesome -->
-
 </head>
 
 <body>
@@ -216,85 +215,7 @@
                 <div class="row">
 
                     <!--begin twelvecol -->
-                    <div class="twelvecol">
-
-                        <div class="twocol services_item">
-                          <a href="https://todo-list.app" target="_blank">
-                            <div class="icon_wrapper service_dev">
-                                <div class="icon_box">
-                                    <i class="fa-rectangle-list icon-8x"></i>
-                                    <span class="services_arrow service_dev"></span>
-                                </div>
-                            </div>
-                            <h2>Todo-List.app</h2>
-                            <p>A todo list app and system that works across every platform, is native to that platform, and privacy is the key to everything</p>
-                          </a>
-                        </div>
-
-                        <div class="twocol services_item">
-                          <a href="https://k8sdeploy.dev" target="_blank">
-                            <div class="icon_wrapper service_staging">
-                                <div class="icon_box">
-                                    <i class="fa-ship icon-8x"></i>
-                                    <span class="services_arrow service_staging"></span>
-                                </div>
-                            </div>
-                            <h2>K8sDeploy.dev</h2>
-                            <p>A kubernetes deployment system that works on ARM and x86.</p>
-                          </a>
-                        </div>
-
-                        <div class="twocol services_item">
-                          <a href="https://bugfix.es" target="_blank">
-                            <div class="icon_wrapper service_dev">
-                                <div class="icon_box">
-                                    <i class="fa-bug icon-8x"></i>
-                                    <span class="services_arrow service_dev"></span>
-                                </div>
-                            </div>
-                            <h2>Bugfix.es</h2>
-                            <p>A bug tracking system which tells you when an issue has happened.</p>
-                          </a>
-                        </div>
-
-                      <div class="twocol services_item">
-                        <a href="https://tracklin.es" target="_blank">
-                          <div class="icon_wrapper service_dev">
-                            <div class="icon_box">
-                              <i class="fa-shuffle icon-8x"></i>
-                              <span class="services_arrow service_dev"></span>
-                            </div>
-                          </div>
-                          <h2>Tracklin.es</h2>
-                          <p>An issue tracking system that doesn't require training to use.</p>
-                        </a>
-                      </div>
-
-                      <div class="twocol services_item">
-                        <a href="https://fruitstall.net" target="_blank">
-                          <div class="icon_wrapper service_dev">
-                            <div class="icon_box">
-                              <i class="fa-boxes-stacked icon-8x"></i>
-                              <span class="services_arrow service_dev"></span>
-                            </div>
-                          </div>
-                          <h2>Fruitstall.net</h2>
-                          <p>A stock management system for the 22nd century.</p>
-                        </a>
-                      </div>
-
-                        <div class="twocol last services_item">
-                          <a href="https://retro-board.it" target="_blank">
-                            <div class="icon_wrapper service_dev">
-                                <div class="icon_box">
-                                    <i class="fa-chalkboard-user icon-8x"></i>
-                                    <span class="services_arrow service_dev"></span>
-                                </div>
-                            </div>
-                            <h2>Retro-Board.it</h2>
-                            <p>A retro-board which works the way retro-boards should work.</p>
-                          </a>
-                        </div>
+                    <div class="twelvecol" id="soon">
 
                     </div>
                     <!--end twelvecol -->
@@ -407,20 +328,77 @@
 	</script>
     <!--end placeholder script -->
 
-    <!-- begin countdown script-->
-    <script>
-		$(document).ready(function(){
-			$("#countdown").countdown({
-				date: "01 january 2023 23:59:00",
-				format: "on"
-			},
+<script type="text/javascript">
+  var raw = new XMLHttpRequest()
+  raw.open('GET', './soon.json', false)
+  raw.onreadystatechange = function() {
+    if (raw.readyState === 4) {
+      if (raw.status === 200 || raw.status == 0) {
+        var allText = raw.responseText;
+        var json = JSON.parse(allText);
+        var html = '';
+        var launchTime = Date.parse("January 1 2030 23:59:00");
+        for (var i = 0; i < json.length; i++) {
+          var year = json[i].launchDate.year
+          var month = json[i].launchDate.month === 0 ? 1 : json[i].launchDate.month
+          var day = json[i].launchDate.day
+          var newLaunch = Date.parse(year + "-" + month + "-" + day + " 23:59:00");
 
-			function() {
-				// callback function
-			});
-		});
-	</script>
-    <!-- end countdown script-->
+          if (newLaunch < launchTime) {
+            launchTime = newLaunch
+          }
+
+          var last = ''
+          if (i === json.length - 1) {
+            last = 'last'
+          }
+
+          var color = "drac-bg-red"
+          if (json[i].progress <= 15) {
+            color = "drac-bg-red"
+          } else if (json[i].progress <= 30 && json[i].progress > 15) {
+            color = "drac-bg-yellow"
+          } else if (json[i].progress <= 45 && json[i].progress > 30) {
+            color = "drac-bg-orange"
+          } else if (json[i].progress <= 60 && json[i].progress > 45) {
+            color = "drac-bg-pink"
+          } else if (json[i].progress <= 75 && json[i].progress > 60) {
+            color = "drac-bg-purple"
+          } else if (json[i].progress <= 90 && json[i].progress > 75) {
+            color = "drac-bg-cyan"
+          } else if (json[i].progress <= 100 && json[i].progress > 90) {
+            color = "drac-bg-green"
+          }
+
+          html += '<div class="twocol services_item ' + last +'">'
+          html += '<a href="' + json[i].url + '" target="_blank">'
+          html += '<div class="icon_wrapper ' + color + '">'
+          html += '<div class="icon_box">'
+          html += '<i class="fa-' + json[i].icon + ' icon-8x"></i>'
+          html += '<span class="services_arrow ' + color + '"></span>'
+          html += '</div>'
+          html += '</div>'
+          html += '<h2>' + json[i].name + '</h2>'
+          html += '<p>' + json[i].description + '</p>'
+          html += '</a>'
+          html += '</div>'
+        }
+        document.getElementById('soon').innerHTML = html
+      }
+
+      $(document).ready(function(){
+        $("#countdown").countdown({
+          date: launchTime,
+          format: "on"
+        },
+        function() {
+          // callback function
+        });
+      })
+    }
+  }
+  raw.send(null)
+</script>
 
 </body>
 </html>

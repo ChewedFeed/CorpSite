@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://k8sdeploy.dev",
+    "launchDate": {
+      "year": 2023,
+      "month": 0,
+      "day": 1
+    },
+    "name": "K8sDeploy",
+    "description": "K8sDeploy is a tool to deploy your Kubernetes applications. That works on x86 and ARM.",
+    "icon": "ship",
+    "progress": 85
+  },
+  {
+    "url": "https://bugfix.es",
+    "launchDate": {
+      "year": 2023,
+      "month": 5,
+      "day": 1
+    },
+    "name": "BugFix.es",
+    "description": "BugFix.es is a bug and issue creator that generates off your codes issues.",
+    "icon": "bug",
+    "progress": 50
+  },
+  {
+    "url": "https://retro-board.it",
+    "launchDate": {
+      "year": 2023,
+      "month": 6,
+      "day": 1
+    },
+    "name": "Retro-Board.it",
+    "description": "Retro-Board.it is a retro-board the way a retro-board is supposed to work.",
+    "progress": 60,
+    "icon": "chalkboard-user"
+  },
+  {
+    "url": "https://fruitstall.net",
+    "launchDate": {
+      "year": 2025,
+      "month": 0,
+      "day": 1
+    },
+    "name": "FruitStall",
+    "description": "FruitStall is a stock management system that doesn't suck.",
+    "progress": 5,
+    "icon": "boxes-stacked"
+  },
+  {
+    "url": "https://tracklin.es",
+    "launchDate": {
+      "year": 2024,
+      "month": 0,
+      "day": 1
+    },
+    "name": "Tracklin.es",
+    "description": "An issue tracking system that doesn't require training to use.",
+    "icon": "shuffle",
+    "progress": 5
+  },
+  {
+    "url": "https://todo-list.app",
+    "name": "Todo List",
+    "launchDate": {
+      "year": 2024,
+      "month": 5,
+      "day": 1
+    },
+    "description": "Todo-List is a ... that works across all systems natively",
+    "icon": "rectangle-list",
+    "progress": 5
+  }
+]

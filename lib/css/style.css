@@ -1204,21 +1204,45 @@ span.quotes_autor{
 	}
 }
 
-.service_live {
-  background-color: #367259;
+.drac-bg-cyan {
+  background-color: #80ffea;
 }
-.icon_box .service_live {
-  background-color: #367259;
+.icon_box .drac-bg-cyan {
+  background-color: #80ffea;
 }
-.service_dev {
-  background-color: #DD4A38;
+.drac-bg-red {
+  background-color: #ff9580;;
 }
-.icon_box .service_dev {
-  background-color: #DD4A38;
+.icon_box .drac-bg-red {
+  background-color: #ff9580;;
 }
-.service_staging {
-  background-color: #646089;
+.drac-bg-pink {
+  background-color: #ff80bf;
 }
-.icon_box .service_staging {
-  background-color: #646089;
+.icon_box .drac-bg-pink {
+  background-color: #ff80bf;
+}
+.drac-bg-purple {
+  background-color: #b8a0ff;
+}
+.icon_box .drac-bg-purple {
+  background-color: #b8a0ff;
+}
+.drac-bg-green {
+  background-color: #8aff80;;
+}
+.icon_box .drac-bg-green {
+  background-color: #8aff80;
+}
+.drac-bg-yellow {
+  background-color: #ffff80;
+}
+.icon_box .drac-bg-yellow {
+  background-color: #ffff80;
+}
+.drac-bg-orange {
+  background-color: #ffca80;
+}
+.icon_box .drac-bg-orange {
+  background-color: #ffca80;
 }
