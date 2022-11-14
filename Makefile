@@ -5,7 +5,7 @@ export
 
 .PHONY: build-images
 build-images:
-	nerdctl build --platform=arm64,amd64 --tag containers.chewedfeed.com/chewedfeed/${SERVICE_NAME}:${GIT_COMMIT} -f ./k8s/Dockerfile .
+	nerdctl build --platform=arm64,amd64 --tag containers.chewedfeed.com/chewedfeed/${SERVICE_NAME}:${GIT_COMMIT} -f ./k8s/Containerfile .
 	nerdctl tag containers.chewedfeed.com/chewedfeed/${SERVICE_NAME}:${GIT_COMMIT} containers.chewedfeed.com/chewedfeed/${SERVICE_NAME}:latest
 
 .PHONY: publish-images
