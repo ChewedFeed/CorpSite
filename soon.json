@@ -58,11 +58,11 @@
       "month": 0,
       "day": 1
     },
-    "name": "Tracklin.es",
+    "name": "TrackLin.es",
     "description": "An issue tracking system that doesn't require training to use.",
     "icon": "shuffle",
     "progress": 5,
-    "fullDesc": "<p>Tracklin.es is a bug and issue tracker like Jira but without the headaches</p>"
+    "fullDesc": "<p>TrackLin.es is a bug and issue tracker like Jira but without the headaches</p>"
   },
   {
     "url": "https://todo-list.app",
