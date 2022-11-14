@@ -72,7 +72,7 @@
       "month": 5,
       "day": 1
     },
-    "description": "Todo-List is a ... that works across all systems natively",
+    "description": "Todo-List is a ... that works across all systems natively.",
     "icon": "rectangle-list",
     "progress": 5,
     "fullDesc": "<p>Todo-List is a ... that works across all systems natively</p>\n                <ul>\n                  <li>Web</li>\n                  <li>Android</li>\n                  <li>iOS</li>\n                  <li>ipadOS</li>\n                  <li>Windows</li>\n                  <li>macOS</li>\n                  <li>Linux (Wayland {sway})</li>\n                </ul>\n                <p>Initial launch will be Web and Linux</p>"
