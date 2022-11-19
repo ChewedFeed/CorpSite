@@ -509,10 +509,11 @@ a#logo {
 	padding-right: 5%;
 	padding-top:30px;
 	padding-bottom:30px;
-	background-color:#DD4A38;
+	background-color:#1d1f21;
 	position: relative;
 	z-index:1000;
 	text-align:center;
+  border-top: 1px solid #757575;
 }
 
 #footer a{
@@ -630,6 +631,9 @@ h1.slogan{
 	-o-text-shadow :1px 1px #151515;
 	-khtml-text-shadow :1px 1px #151515;
 	font-family: 'open_sanssemibold', Arial, Helvetica, sans-serif;
+}
+#service_launch_name {
+  text-transform: capitalize;
 }
 
 /* ----- Countdown ----- */
@@ -1211,10 +1215,10 @@ span.quotes_autor{
   background-color: #80ffea;
 }
 .drac-bg-red {
-  background-color: #ff9580;;
+  background-color: #ff9580;
 }
 .icon_box .drac-bg-red {
-  background-color: #ff9580;;
+  background-color: #ff9580;
 }
 .drac-bg-pink {
   background-color: #ff80bf;
