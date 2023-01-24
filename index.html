@@ -29,16 +29,16 @@
               <a href="/" id="logo"><img src="./lib/images/full_logo.png" alt="Logo"></a>
               <ul id="nav">
                 <li class="current">
-                  <a href="#home"><i class="icon-home"></i><br />Home</a>
+                  <a href="#home" class="scroll_btn"><i class="icon-home"></i><br />Home</a>
                 </li>
                 <li>
-                  <a href="#about"><i class="icon-user"></i><br />About Us</a>
+                  <a href="#about" class="scroll_btn"><i class="icon-user"></i><br />About Us</a>
                 </li>
                 <li>
-                  <a href="#services"><i class="icon-cogs"></i><br />Services</a>
+                  <a href="#services" class="scroll_btn"><i class="icon-cogs"></i><br />Services</a>
                 </li>
                 <li>
-                  <a href="//uptime.chewedfeed.com/status/chewedfeed/"><i class="icon-stethoscope"></i><br />Uptime Status</a>
+                  <a href="//uptime.chewedfeed.com/status/chewedfeed/" class="forceClick"><i class="icon-stethoscope"></i><br />Uptime Status</a>
                 </li>
               </ul>
             </div>
@@ -163,7 +163,7 @@
     <script src="./lib/js/jquery.scrollTo-min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-        $('#nav li a, a.scroll_btn, a.read_more').click(function(e){
+        $('a.scroll_btn, a.read_more').click(function(e){
           $.scrollTo(this.hash || 0, 1100, { axis:'y',easing:'easeInOutExpo' });
           e.preventDefault();
         });
@@ -179,13 +179,7 @@
       });
     </script>
     <script src="./lib/js/tinynav.min.js"></script>
-    <script>
-      $(function () {
-        $('#nav').tinyNav({
-          header: '-- Navigation --' // Writing any title with this option triggers the header
-        });
-      });
-    </script>
+
     <script type="text/javascript" src="./lib/js/jquery.sticky.js"></script>
     <script>
       $(window).load(function(){
