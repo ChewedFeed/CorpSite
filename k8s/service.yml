@@ -23,10 +23,10 @@ spec:
         app: corpsite
     spec:
       imagePullSecrets:
-        - name: regcred
+        - name: docker-registry-secret
       containers:
         - name: corpsite
-          image: containers.chewedfeed.com/chewedfeed/corpsite:latest
+          image: containers.chewed-k8s.net/chewedfeed/corpsite:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
